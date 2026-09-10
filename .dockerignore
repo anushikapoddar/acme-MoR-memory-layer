@@ -1,0 +1,7 @@
+.git
+.demo
+.env
+.env.local
+__pycache__
+*.pyc
+.DS_Store
