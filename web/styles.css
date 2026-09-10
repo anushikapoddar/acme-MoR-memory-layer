@@ -1,6 +1,6 @@
-/* Merchant Risk — Dodo Payments
-   Dark console, matching app.dodopayments.com. Palette from
-   dodopayments.com/brand; config.BRAND is the source of truth and a test
+/* Merchant Risk — Acme MoR
+   Dark console, matching app.acmemor.com. Palette from
+   acmemor.com/brand; config.BRAND is the source of truth and a test
    asserts the two stay in sync. Anything painted on a fixed brand colour
    hardcodes its foreground — see .btn-primary, .nav a.on, .real. */
 :root{

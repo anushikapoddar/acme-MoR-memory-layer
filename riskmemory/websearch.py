@@ -15,7 +15,7 @@ import urllib.request
 from html.parser import HTMLParser
 from typing import Optional
 
-UA = "DodoMerchantRiskMemory/1.0 (underwriting-demo; local)"
+UA = "AcmeMerchantRiskMemory/1.0 (underwriting-demo; local)"
 TIMEOUT = 5
 
 #: Phrases a reviewer would treat as elevated risk if they appear in the

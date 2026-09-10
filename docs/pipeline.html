@@ -63,7 +63,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
 <div class="wrap">
 
 <header class="mast">
-  <div class="eyebrow">Dodo Payments &middot; Risk &amp; Compliance &middot; Companion to the problem statement</div>
+  <div class="eyebrow">Acme MoR &middot; Risk &amp; Compliance &middot; Companion to the problem statement</div>
   <h1>Merchant Risk Pipeline</h1>
   <p class="dek">Five pictures: the loop that is broken today, the three ways merchants go wrong and how long each takes to surface, the end-to-end system we are proposing to build, how the memory keeps updating itself once it is running, and the wider risk taxonomy that shows what the pipeline still cannot see.</p>
 </header>
@@ -71,7 +71,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
 <!-- ============ FIG 1 ============ -->
 <section>
   <h2><span class="sn">Figure 1</span>The problem: a loop that never closes</h2>
-  <p>Dodo decides, the merchant trades, and months later an outcome arrives &mdash; a chargeback, a rights claim, a termination. That outcome never travels back to the decision that caused it. The reasoning behind the original call was never written down, so there is nothing for it to travel back <em>to</em>.</p>
+  <p>Acme decides, the merchant trades, and months later an outcome arrives &mdash; a chargeback, a rights claim, a termination. That outcome never travels back to the decision that caused it. The reasoning behind the original call was never written down, so there is nothing for it to travel back <em>to</em>.</p>
   <figure>
     <div class="figbox">
       <svg viewBox="0 0 1000 215" role="img" aria-label="Two panels. Today: application, decision, merchant and outcome form a chain, and the return path from outcome back to decision is severed and labelled never returns. Proposed: the same chain, with the return path running through a memory store and a replay gate.">
@@ -154,7 +154,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
         <rect x="120" y="77" width="307" height="10" rx="2" fill="var(--sig)" fill-opacity=".26"/>
         <rect x="118" y="72" width="4" height="20" fill="var(--sig)"/>
         <circle cx="427" cy="82" r="5" fill="none" stroke="var(--sig)" stroke-width="1.8"/>
-        <text x="437" y="86" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--sig)">DAY 74 &mdash; PUBLISHER&rsquo;S COUNSEL WRITES TO DODO</text>
+        <text x="437" y="86" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--sig)">DAY 74 &mdash; PUBLISHER&rsquo;S COUNSEL WRITES TO ACME</text>
         <circle cx="120" cy="106" r="5" fill="var(--accent)"/>
         <text x="132" y="110" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--accent)">DAY 0 &mdash; NO LICENCES ON FILE; TERMS PAGE MATCHES A TERMINATED MERCHANT</text>
 
@@ -257,7 +257,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
         <g text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="currentColor" fill-opacity=".6">
           <text x="180" y="272">MERCHANTS &middot; PEOPLE &middot; DOMAINS</text><text x="180" y="286">PAYOUT &middot; CHANNELS &middot; OFFERINGS</text>
           <text x="484" y="272">EPISODIC: WHAT HAPPENED</text><text x="484" y="286">ADD / UPDATE / INVALIDATE</text>
-          <text x="788" y="272">ACCEPTED / RESTRICTED</text><text x="788" y="286">PROHIBITED &middot; DODO POLICY</text>
+          <text x="788" y="272">ACCEPTED / RESTRICTED</text><text x="788" y="286">PROHIBITED &middot; ACME POLICY</text>
         </g>
 
         <!-- ROW C : LIFECYCLE -->
@@ -428,7 +428,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
           <circle cx="48" cy="436" r="4" fill="none" stroke="var(--sig)" stroke-width="1.6"/><text x="64" y="440">Concentration &mdash; one merchant, too much volume</text>
         </g>
         <text x="64" y="472" font-size="11.5" fill="var(--sig)">An honest merchant goes bust owing twelve months</text>
-        <text x="64" y="490" font-size="11.5" fill="var(--sig)">of service. The refunds land on Dodo.</text>
+        <text x="64" y="490" font-size="11.5" fill="var(--sig)">of service. The refunds land on Acme.</text>
         <line x1="42" y1="538" x2="468" y2="538" stroke="currentColor" stroke-opacity=".18"/>
         <text x="42" y="560" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1" fill="currentColor" fill-opacity=".5">NEEDS</text>
         <text x="42" y="578" font-size="11.5" fill="currentColor" fill-opacity=".75">Unfulfilled prepaid balance tracked per merchant</text>
@@ -451,12 +451,12 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
       <span><i style="background:var(--accent);border-radius:50%;width:9px;height:9px"></i>Covered by the pipeline as drawn</span>
       <span><i style="border:1.6px solid var(--sig);background:none;border-radius:50%;width:9px;height:9px"></i>Not covered &mdash; needs a signal we do not collect</span>
     </div>
-    <figcaption><b>Eight of twelve are uncovered, and the pattern is not random.</b> Every gap is a <em>financial or behavioural</em> signal rather than a content one &mdash; volume against forecast, dispute velocity, payout-detail changes, unfulfilled prepaid balance. The fix is one more input lane into the same context graph, not a second system. Two gaps deserve naming out loud: <b>deceptive billing</b> is probably the highest-probability risk in Dodo&rsquo;s actual customer base, since the merchant and product are entirely real and only the cancellation flow offends &mdash; and the FTC has pursued a merchant of record directly on those grounds. And <b>insolvency</b> is not fraud at all, so no amount of fraud detection will ever surface it.</figcaption>
+    <figcaption><b>Eight of twelve are uncovered, and the pattern is not random.</b> Every gap is a <em>financial or behavioural</em> signal rather than a content one &mdash; volume against forecast, dispute velocity, payout-detail changes, unfulfilled prepaid balance. The fix is one more input lane into the same context graph, not a second system. Two gaps deserve naming out loud: <b>deceptive billing</b> is probably the highest-probability risk in Acme&rsquo;s actual customer base, since the merchant and product are entirely real and only the cancellation flow offends &mdash; and the FTC has pursued a merchant of record directly on those grounds. And <b>insolvency</b> is not fraud at all, so no amount of fraud detection will ever surface it.</figcaption>
   </figure>
 </section>
 
 <footer>
-  <p>Companion to the <a href="https://claude.ai/code/artifact/9fc54cd8-b756-4a8c-8ac4-9f46379c935f">Merchant Risk Memory problem statement</a> &middot; Anushika &middot; 20 Aug 2026. Day counts in Figure 2 are drawn from the illustrative cases in §2 of that document, not from Dodo's observed data &mdash; replacing them with real detection lag is an open item; see §6 of that document for every number we are assuming.</p>
+  <p>Companion to the <a href="https://claude.ai/code/artifact/9fc54cd8-b756-4a8c-8ac4-9f46379c935f">Merchant Risk Memory problem statement</a> &middot; Anushika &middot; 20 Aug 2026. Day counts in Figure 2 are drawn from the illustrative cases in §2 of that document, not from Acme's observed data &mdash; replacing them with real detection lag is an open item; see §6 of that document for every number we are assuming.</p>
 </footer>
 
 </div>

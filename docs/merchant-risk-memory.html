@@ -1,7 +1,7 @@
 <title>Merchant Risk Memory</title>
 <style>
 :root{
-  /* Dodo Payments brand — dodopayments.com/brand + live computed styles */
+  /* Acme MoR brand — acmemor.com/brand + live computed styles */
   --brand-lime:#C6FE1E; --brand-forest:#004F32; --brand-green:#00D87D;
   --brand-blue:#1264FF; --brand-pink:#EE46BC; --brand-purple:#7A5AF8;
   --brand-yellow:#FFD84B; --brand-orange:#FF8B37; --brand-red:#E83439;
@@ -372,7 +372,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
     <div class="idbar">
       <span class="mark"></span>
       <span class="nm">Merchant Risk Memory</span>
-      <span class="sub">Dodo Payments</span>
+      <span class="sub">Acme MoR</span>
       <span class="date">20 Aug 2026 &middot; Anushika</span>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">
@@ -388,9 +388,9 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 <div class="wrap">
 
 <header class="mast">
-  <div class="eyebrow">Dodo Payments &middot; Risk &amp; Compliance &middot; Problem definition v0.6</div>
+  <div class="eyebrow">Acme MoR &middot; Risk &amp; Compliance &middot; Problem definition v0.6</div>
   <h1>Merchant Risk Memory</h1>
-  <p class="dek">Dodo is the merchant of record. Every merchant we admit borrows our licences and our liability. This defines what an anti-fragile memory layer is being asked to solve, and states every number we are assuming in order to start building.</p>
+  <p class="dek">Acme is the merchant of record. Every merchant we admit borrows our licences and our liability. This defines what an anti-fragile memory layer is being asked to solve, and states every number we are assuming in order to start building.</p>
   <dl class="metastrip">
     <div><dt>Status</dt><dd>Draft for alignment</dd></div>
     <div><dt>Author</dt><dd>Anushika</dd></div>
@@ -401,13 +401,13 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 
 <section style="padding-top:34px">
   <h2><span class="sn">&sect; 1</span>Why this is a company-level risk</h2>
-  <p>As seller of record, Dodo is a party to every transaction &mdash; so the chargeback, the rights-holder claim and the regulator all arrive at Dodo, not at the merchant, who is by then unreachable. And because merchants transact under shared Dodo merchant identifiers, one bad actor's dispute ratio pollutes a pool every honest merchant depends on. <strong>The cost of a bad merchant is not bounded by their volume. It is bounded by our standing with our acquirers.</strong></p>
+  <p>As seller of record, Acme is a party to every transaction &mdash; so the chargeback, the rights-holder claim and the regulator all arrive at Acme, not at the merchant, who is by then unreachable. And because merchants transact under shared Acme merchant identifiers, one bad actor's dispute ratio pollutes a pool every honest merchant depends on. <strong>The cost of a bad merchant is not bounded by their volume. It is bounded by our standing with our acquirers.</strong></p>
   <p>The counterweight matters just as much. Our customer <em>is</em> the solo developer with a two-week-old domain, no company registration and possibly a Stripe ban in their history &mdash; indistinguishable from a fraudster on every naive feature. A system tuned only to avoid bad merchants converges on rejecting everyone, and an MoR that rejects everyone has no business.</p>
   <p>So the objective is not &ldquo;catch fraud.&rdquo; It is: <strong>maximise approved legitimate volume within a bounded expected-loss and dispute-ratio budget</strong>, and get faster and more confident at the boundary over time.</p>
 
   <div class="statement">
     <span class="tag">Problem statement</span>
-    <p>Dodo assumes full seller-of-record liability but decides from <strong>isolated point-in-time evidence</strong>, using <strong>human judgement that does not persist</strong>, against <strong>outcomes that arrive months later and are never fed back</strong>. The same losses recur, and the reasoning behind a rejection lives in one analyst's head.</p>
+    <p>Acme assumes full seller-of-record liability but decides from <strong>isolated point-in-time evidence</strong>, using <strong>human judgement that does not persist</strong>, against <strong>outcomes that arrive months later and are never fed back</strong>. The same losses recur, and the reasoning behind a rejection lives in one analyst's head.</p>
     <p><strong>We need to turn every merchant decision, incident and outcome into durable, connected, retrievable memory &mdash; so each new decision carries everything the platform has learned, and so adverse events measurably strengthen future decisions rather than merely being survived.</strong></p>
   </div>
 </section>
@@ -419,13 +419,13 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
     <div class="case">
       <h5>A &mdash; The rights they never had</h5>
       <p class="lbl">Undisclosed illegality at intake &middot; the copyright case</p>
-      <p>An &ldquo;AI reading companion&rdquo; with a 40,000-book catalogue on a $9/month subscription. Clean site, working demo, <span class="chip c-warn">restricted but permitted</span> category. Approved in four minutes. On day 74 a publisher's counsel writes to Dodo, because Dodo is the seller on the receipt.</p>
+      <p>An &ldquo;AI reading companion&rdquo; with a 40,000-book catalogue on a $9/month subscription. Clean site, working demo, <span class="chip c-warn">restricted but permitted</span> category. Approved in four minutes. On day 74 a publisher's counsel writes to Acme, because Acme is the seller on the receipt.</p>
       <p class="pt"><b>Knowable at day 0:</b> no licences were ever requested, and the terms page was copied verbatim from a merchant we terminated in March.</p>
     </div>
     <div class="case">
       <h5>B &mdash; The product that became a different product</h5>
       <p class="lbl">Post-approval drift &middot; the misrepresentation case</p>
-      <p>Underwritten accurately as B2B meeting summarisation. At month five the team pivots the same domain and the same Dodo account to a <span class="chip c-bad">prohibited</span> category. Nothing in our records changes. Disputes triple.</p>
+      <p>Underwritten accurately as B2B meeting summarisation. At month five the team pivots the same domain and the same Acme account to a <span class="chip c-bad">prohibited</span> category. Nothing in our records changes. Disputes triple.</p>
       <p class="pt"><b>The structural gap:</b> underwriting is treated as an event, but merchant risk is a time series. The first signal we receive is the chargeback &mdash; the loss itself, arriving as the alert.</p>
     </div>
     <div class="case">
@@ -450,7 +450,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
     </table>
   </div>
   <p><strong>The gaps are not random.</strong> Every one is a financial or behavioural signal rather than a content one, and everything §3 proposes is content-oriented &mdash; crawl the site, extract facts, diff the offering. That catches a merchant lying or drifting; it is blind to one that is failing or being attacked. The fix is one more input lane feeding the same graph, not a second system.</p>
-  <p>Two deserve naming out loud. <strong>Deceptive billing</strong> is probably the highest-<em>probability</em> risk in Dodo&rsquo;s actual customer base, because the merchant and the product are entirely real and only the cancellation flow offends &mdash; and the FTC has pursued a merchant of record directly on those grounds, with penalties assessed per affected customer. <strong>Insolvency</strong> is not fraud at all: an honest SaaS merchant goes under owing twelve months of prepaid service, and the refunds land on Dodo. No amount of fraud detection will ever surface it.</p>
+  <p>Two deserve naming out loud. <strong>Deceptive billing</strong> is probably the highest-<em>probability</em> risk in Acme&rsquo;s actual customer base, because the merchant and the product are entirely real and only the cancellation flow offends &mdash; and the FTC has pursued a merchant of record directly on those grounds, with penalties assessed per affected customer. <strong>Insolvency</strong> is not fraud at all: an honest SaaS merchant goes under owing twelve months of prepaid service, and the refunds land on Acme. No amount of fraud detection will ever surface it.</p>
 </section>
 
 <section>
@@ -458,7 +458,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 
   <figure>
     <div class="figbox">
-      <svg viewBox="0 0 880 400" role="img" aria-label="A context graph: a clean-looking applicant connects via shared domain infrastructure, payout account and director to two merchants Dodo has already terminated or flagged. An application-level model sees only the left half.">
+      <svg viewBox="0 0 880 400" role="img" aria-label="A context graph: a clean-looking applicant connects via shared domain infrastructure, payout account and director to two merchants Acme has already terminated or flagged. An application-level model sees only the left half.">
         <defs>
           <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="currentColor"/></marker>
           <marker id="arS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="var(--sig)"/></marker>
@@ -560,7 +560,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 
 <section>
   <h2><span class="sn">&sect; 6</span>Working assumptions &mdash; every open question, answered</h2>
-  <p>Rather than block on founder input, every question is answered below with an assumed value so the build can proceed. <strong>All numbers in this section are assumed, not measured.</strong> They are chosen to be plausible for an MoR of Dodo&rsquo;s stage and stated explicitly so they can be corrected rather than debated in the abstract. Correct any of them and I will re-derive what depends on it.</p>
+  <p>Rather than block on founder input, every question is answered below with an assumed value so the build can proceed. <strong>All numbers in this section are assumed, not measured.</strong> They are chosen to be plausible for an MoR of Acme&rsquo;s stage and stated explicitly so they can be corrected rather than debated in the abstract. Correct any of them and I will re-derive what depends on it.</p>
 
   <h4>6.1 &nbsp;Assumed operating baseline</h4>
   <div class="tbl">
@@ -606,21 +606,21 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
       </tbody>
     </table>
   </div>
-  <p>Two of these carry most of the risk of being wrong. <strong>Number 11</strong> is close to a guess &mdash; it is ordered by what the literature says is dangerous, not by Dodo&rsquo;s books, and one afternoon with the real numbers would beat all of my reasoning. <strong>Number 12</strong> produces the largest figure in this document from the thinnest evidence: if roughly a third of merchants sell annual plans and are on average halfway through their term, the unfulfilled obligation Dodo would inherit on their failure is around $22M. Even at half that, it dwarfs the assumed $350k annual fraud loss &mdash; which suggests the biggest exposure here may not be fraud at all.</p>
+  <p>Two of these carry most of the risk of being wrong. <strong>Number 11</strong> is close to a guess &mdash; it is ordered by what the literature says is dangerous, not by Acme&rsquo;s books, and one afternoon with the real numbers would beat all of my reasoning. <strong>Number 12</strong> produces the largest figure in this document from the thinnest evidence: if roughly a third of merchants sell annual plans and are on average halfway through their term, the unfulfilled obligation Acme would inherit on their failure is around $22M. Even at half that, it dwarfs the assumed $350k annual fraud loss &mdash; which suggests the biggest exposure here may not be fraud at all.</p>
 </section>
 
 <section>
   <h2><span class="sn">&sect; 7</span>Structural assumptions &mdash; correct these first</h2>
-  <div class="assume"><span class="id">A-1</span><div>Merchants transact under Dodo's MIDs, so dispute ratios aggregate at platform level. See question 4.</div></div>
+  <div class="assume"><span class="id">A-1</span><div>Merchants transact under Acme's MIDs, so dispute ratios aggregate at platform level. See question 4.</div></div>
   <div class="assume"><span class="id">A-2</span><div>Onboarding is substantially manual today, and rationales are not captured in structured form.</div></div>
-  <div class="assume"><span class="id">A-3</span><div>Dodo's published merchant acceptance policy &mdash; accepted, restricted, prohibited &mdash; is the authoritative taxonomy we classify against.</div></div>
+  <div class="assume"><span class="id">A-3</span><div>Acme's published merchant acceptance policy &mdash; accepted, restricted, prohibited &mdash; is the authoritative taxonomy we classify against.</div></div>
   <div class="assume"><span class="id">A-4</span><div>Continuously crawling merchant sites and public fulfilment channels is contractually acceptable. Drift detection is not buildable otherwise.</div></div>
   <div class="assume"><span class="id">A-5</span><div>Seconds-to-minutes decision latency is acceptable; this is not an inline checkout path.</div></div>
   <div class="assume"><span class="id">A-6</span><div>Transaction, refund, payout and login telemetry can be fed into the same graph. §2.1 shows half the risk taxonomy is invisible without it.</div></div>
 </section>
 
 <footer>
-  <p>Diagrams: <a href="https://claude.ai/code/artifact/2cb36867-64f4-4800-b371-189d48876f2a">Merchant Risk Pipeline</a> &mdash; the broken loop, the case timeline, the end-to-end flow and the memory update lifecycle. Sources: <a href="https://docs.dodopayments.com/miscellaneous/merchant-acceptance">Dodo Payments Merchant Acceptance Policy</a> &middot; <a href="https://docs.mem0.ai/cookbooks/essentials/choosing-memory-architecture-vector-vs-graph">Mem0 &mdash; vector vs. graph memory</a>. Case and merchant names in §2 and §3 are illustrative composites.</p>
+  <p>Diagrams: <a href="https://claude.ai/code/artifact/2cb36867-64f4-4800-b371-189d48876f2a">Merchant Risk Pipeline</a> &mdash; the broken loop, the case timeline, the end-to-end flow and the memory update lifecycle. Sources: <a href="https://docs.acmemor.com/miscellaneous/merchant-acceptance">Acme MoR Merchant Acceptance Policy</a> &middot; <a href="https://docs.mem0.ai/cookbooks/essentials/choosing-memory-architecture-vector-vs-graph">Mem0 &mdash; vector vs. graph memory</a>. Case and merchant names in §2 and §3 are illustrative composites.</p>
 </footer>
 
 </div>
@@ -629,7 +629,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 <div class="wrap">
 
 <header class="mast">
-  <div class="eyebrow">Dodo Payments &middot; Risk &amp; Compliance &middot; Companion to the problem statement</div>
+  <div class="eyebrow">Acme MoR &middot; Risk &amp; Compliance &middot; Companion to the problem statement</div>
   <h1>Merchant Risk Pipeline</h1>
   <p class="dek">Five pictures: the loop that is broken today, the three ways merchants go wrong and how long each takes to surface, the end-to-end system we are proposing to build, how the memory keeps updating itself once it is running, and the wider risk taxonomy that shows what the pipeline still cannot see.</p>
 </header>
@@ -637,7 +637,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 <!-- ============ FIG 1 ============ -->
 <section>
   <h2><span class="sn">Figure 1</span>The problem: a loop that never closes</h2>
-  <p>Dodo decides, the merchant trades, and months later an outcome arrives &mdash; a chargeback, a rights claim, a termination. That outcome never travels back to the decision that caused it. The reasoning behind the original call was never written down, so there is nothing for it to travel back <em>to</em>.</p>
+  <p>Acme decides, the merchant trades, and months later an outcome arrives &mdash; a chargeback, a rights claim, a termination. That outcome never travels back to the decision that caused it. The reasoning behind the original call was never written down, so there is nothing for it to travel back <em>to</em>.</p>
   <figure>
     <div class="figbox">
       <svg viewBox="0 0 1000 215" role="img" aria-label="Two panels. Today: application, decision, merchant and outcome form a chain, and the return path from outcome back to decision is severed and labelled never returns. Proposed: the same chain, with the return path running through a memory store and a replay gate.">
@@ -720,7 +720,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
         <rect x="120" y="77" width="307" height="10" rx="2" fill="var(--sig)" fill-opacity=".26"/>
         <rect x="118" y="72" width="4" height="20" fill="var(--sig)"/>
         <circle cx="427" cy="82" r="5" fill="none" stroke="var(--sig)" stroke-width="1.8"/>
-        <text x="437" y="86" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--sig)">DAY 74 &mdash; PUBLISHER&rsquo;S COUNSEL WRITES TO DODO</text>
+        <text x="437" y="86" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--sig)">DAY 74 &mdash; PUBLISHER&rsquo;S COUNSEL WRITES TO ACME</text>
         <circle cx="120" cy="106" r="5" fill="var(--accent)"/>
         <text x="132" y="110" font-family="ui-monospace,Menlo,monospace" font-size="9.5" fill="var(--accent)">DAY 0 &mdash; NO LICENCES ON FILE; TERMS PAGE MATCHES A TERMINATED MERCHANT</text>
 
@@ -823,7 +823,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
         <g text-anchor="middle" font-family="ui-monospace,Menlo,monospace" font-size="9" fill="currentColor" fill-opacity=".6">
           <text x="180" y="272">MERCHANTS &middot; PEOPLE &middot; DOMAINS</text><text x="180" y="286">PAYOUT &middot; CHANNELS &middot; OFFERINGS</text>
           <text x="484" y="272">EPISODIC: WHAT HAPPENED</text><text x="484" y="286">ADD / UPDATE / INVALIDATE</text>
-          <text x="788" y="272">ACCEPTED / RESTRICTED</text><text x="788" y="286">PROHIBITED &middot; DODO POLICY</text>
+          <text x="788" y="272">ACCEPTED / RESTRICTED</text><text x="788" y="286">PROHIBITED &middot; ACME POLICY</text>
         </g>
 
         <!-- ROW C : LIFECYCLE -->
@@ -994,7 +994,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
           <circle cx="48" cy="436" r="4" fill="none" stroke="var(--sig)" stroke-width="1.6"/><text x="64" y="440">Concentration &mdash; one merchant, too much volume</text>
         </g>
         <text x="64" y="472" font-size="11.5" fill="var(--sig)">An honest merchant goes bust owing twelve months</text>
-        <text x="64" y="490" font-size="11.5" fill="var(--sig)">of service. The refunds land on Dodo.</text>
+        <text x="64" y="490" font-size="11.5" fill="var(--sig)">of service. The refunds land on Acme.</text>
         <line x1="42" y1="538" x2="468" y2="538" stroke="currentColor" stroke-opacity=".18"/>
         <text x="42" y="560" font-family="ui-monospace,Menlo,monospace" font-size="9.5" letter-spacing="1" fill="currentColor" fill-opacity=".5">NEEDS</text>
         <text x="42" y="578" font-size="11.5" fill="currentColor" fill-opacity=".75">Unfulfilled prepaid balance tracked per merchant</text>
@@ -1017,12 +1017,12 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
       <span><i style="background:var(--accent);border-radius:50%;width:9px;height:9px"></i>Covered by the pipeline as drawn</span>
       <span><i style="border:1.6px solid var(--sig);background:none;border-radius:50%;width:9px;height:9px"></i>Not covered &mdash; needs a signal we do not collect</span>
     </div>
-    <figcaption><b>Eight of twelve are uncovered, and the pattern is not random.</b> Every gap is a <em>financial or behavioural</em> signal rather than a content one &mdash; volume against forecast, dispute velocity, payout-detail changes, unfulfilled prepaid balance. The fix is one more input lane into the same context graph, not a second system. Two gaps deserve naming out loud: <b>deceptive billing</b> is probably the highest-probability risk in Dodo&rsquo;s actual customer base, since the merchant and product are entirely real and only the cancellation flow offends &mdash; and the FTC has pursued a merchant of record directly on those grounds. And <b>insolvency</b> is not fraud at all, so no amount of fraud detection will ever surface it.</figcaption>
+    <figcaption><b>Eight of twelve are uncovered, and the pattern is not random.</b> Every gap is a <em>financial or behavioural</em> signal rather than a content one &mdash; volume against forecast, dispute velocity, payout-detail changes, unfulfilled prepaid balance. The fix is one more input lane into the same context graph, not a second system. Two gaps deserve naming out loud: <b>deceptive billing</b> is probably the highest-probability risk in Acme&rsquo;s actual customer base, since the merchant and product are entirely real and only the cancellation flow offends &mdash; and the FTC has pursued a merchant of record directly on those grounds. And <b>insolvency</b> is not fraud at all, so no amount of fraud detection will ever surface it.</figcaption>
   </figure>
 </section>
 
 <footer>
-  <p>Companion to the <a href="https://claude.ai/code/artifact/9fc54cd8-b756-4a8c-8ac4-9f46379c935f">Merchant Risk Memory problem statement</a> &middot; Anushika &middot; 20 Aug 2026. Day counts in Figure 2 are drawn from the illustrative cases in §2 of that document, not from Dodo's observed data &mdash; replacing them with real detection lag is an open item; see §6 of that document for every number we are assuming.</p>
+  <p>Companion to the <a href="https://claude.ai/code/artifact/9fc54cd8-b756-4a8c-8ac4-9f46379c935f">Merchant Risk Memory problem statement</a> &middot; Anushika &middot; 20 Aug 2026. Day counts in Figure 2 are drawn from the illustrative cases in §2 of that document, not from Acme's observed data &mdash; replacing them with real detection lag is an open item; see §6 of that document for every number we are assuming.</p>
 </footer>
 
 </div>
@@ -1031,14 +1031,14 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 <div class="wrap">
 
 <header class="mast">
-  <div class="eyebrow">Dodo Payments &middot; Console design &middot; v4 &mdash; as built</div>
+  <div class="eyebrow">Acme MoR &middot; Console design &middot; v4 &mdash; as built</div>
   <h1>Merchant Risk Console</h1>
   <p class="dek">The console is running. This is what shipped, and &mdash; more usefully &mdash; the four places where the design we wanted and the data we actually have disagreed, and what we did about it. Every number on every screen is computed by the engine. Nothing here is a placeholder.</p>
 </header>
 
 <section>
   <h2><span class="sn">1</span>The shell</h2>
-  <p>A fixed left sidebar with eight destinations, a global search, and a status card that reports what the memory layer currently believes. The palette is Dodo&rsquo;s own: lime <code>#C6FE1E</code> on the active item and the primary action, forest-green-black <code>#00160D</code> for text.</p>
+  <p>A fixed left sidebar with eight destinations, a global search, and a status card that reports what the memory layer currently believes. The palette is Acme&rsquo;s own: lime <code>#C6FE1E</code> on the active item and the primary action, forest-green-black <code>#00160D</code> for text.</p>
   <p>Two things are deliberately <strong>absent</strong>. The <span class="gone">always-on summary bar</span> from v3 is gone &mdash; once an Overview screen existed, a strip repeating the same five numbers on every tab was duplication, and it made Chat and History harder to read for no gain. And there are no <span class="gone">Reports</span>, <span class="gone">Integrations</span> or <span class="gone">Settings</span> tabs: we had nothing real to put behind them, and an empty destination is worse than a missing one.</p>
   <div class="tbl">
     <table>
@@ -1064,7 +1064,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
       <div class="bar"><i></i><i></i><i></i> &nbsp;Merchant Risk Console</div>
       <div class="body m-app">
         <div class="side-m">
-          <div class="brandrow"><s></s><b>Dodo</b></div>
+          <div class="brandrow"><s></s><b>Acme MoR</b></div>
           <a class="on"><s></s>Overview</a>
           <a><s></s>Merchants</a>
           <a><s></s>Evaluations<i>11</i></a>
@@ -1133,7 +1133,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
         <tr><td class="k">Memory accuracy 94.6%</td><td>Memory confidence 90.6%</td><td>There is no accuracy metric. Mean confidence across the records currently in force is a real quantity the store can report.</td></tr>
         <tr><td class="k">&uarr;12% vs last month</td><td>Deltas computed from decision dates</td><td>Two of the four stats have no prior period to compare against. They carry a note instead of an invented arrow &mdash; which is why one reads &minus;8%, not a flattering &uarr;.</td></tr>
         <tr><td class="k">Memory score /100 per merchant</td><td>100 &minus; P(bad), labelled as such</td><td>A bare score invites the reader to think it means something independent. It is one number in two dresses, and the column says so.</td></tr>
-        <tr><td class="k">Retail, F&amp;B, Electronics, Apparel</td><td>Dodo&rsquo;s policy categories</td><td>SaaS, AI product, digital goods, templates &amp; plugins, ebooks. Generic retail verticals describe a business Dodo is not in.</td></tr>
+        <tr><td class="k">Retail, F&amp;B, Electronics, Apparel</td><td>Acme&rsquo;s policy categories</td><td>SaaS, AI product, digital goods, templates &amp; plugins, ebooks. Generic retail verticals describe a business Acme is not in.</td></tr>
       </tbody>
     </table>
   </div>
@@ -1151,7 +1151,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 
 <section>
   <h2><span class="sn">5</span>Two bugs the build surfaced</h2>
-  <p>Seeding the corpus with Dodo&rsquo;s real, publicly-named customers is a test as much as a feature: a clean population that the engine must clear. It did not, twice &mdash; and both failures were the same mistake wearing different clothes. <strong>Prose similarity being mistaken for evidence.</strong></p>
+  <p>Seeding the corpus with Acme&rsquo;s real, publicly-named customers is a test as much as a feature: a clean population that the engine must clear. It did not, twice &mdash; and both failures were the same mistake wearing different clothes. <strong>Prose similarity being mistaken for evidence.</strong></p>
   <div class="tbl">
     <table>
       <thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead>
@@ -1165,8 +1165,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 </section>
 
 <section>
-  <h2><span class="sn">6</span>Real Dodo merchants in the corpus</h2>
-  <p>All <strong>17</strong> publicly-named Dodo customers are seeded: Mole, Vibe3D, Draftly, ReplyDaddy, CatDoes, Indilingo, Scira&nbsp;AI, PeerPush, IndieKit, Betide&nbsp;Studio, Healthify, Parakeet&nbsp;AI, MATIKS, GPAI, Cardboard, SurgeGrowth and Vaya. They give the demo a control population with real product descriptions and plausible operating shapes, against ~4,000 invented merchants.</p>
+  <h2><span class="sn">6</span>Named Acme merchants in the corpus</h2>
+  <p>All <strong>17</strong> publicly-named Acme merchants are seeded: Mole, Vibe3D, Draftly, ReplyDaddy, CatDoes, Indilingo, Scira&nbsp;AI, PeerPush, IndieKit, Betide&nbsp;Studio, Healthify, Parakeet&nbsp;AI, MATIKS, GPAI, Cardboard, SurgeGrowth and Vaya. They give the demo a control population with real product descriptions and plausible operating shapes, against ~4,000 invented merchants.</p>
   <div class="callout warn">
     <span class="tag">Hard rule, enforced in code</span>
     <p><strong>A real merchant never appears next to an adverse finding.</strong> Not flagged, not declined, not in a fraud ring, not graph-linked to a terminated merchant, never carrying a &ldquo;went bad&rdquo; label, never cited as adverse precedent.</p>
@@ -1196,7 +1196,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
 </section>
 
 <footer>
-  Anushika &middot; Dodo Payments &middot; 20 August 2026 &middot; v4, as built.
+  Anushika &middot; Acme MoR &middot; 20 August 2026 &middot; v4, as built.
   Synthetic corpus generated locally from seed 20260820; the application makes no network calls of its own.
 </footer>
 

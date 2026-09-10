@@ -1,5 +1,5 @@
 'use strict';
-/* Merchant Risk Memory -- Dodo Payments underwriting console.
+/* Merchant Risk Memory -- Acme MoR underwriting console.
    Vanilla JS, no framework, no build step. Every number on every screen comes
    from an endpoint that computed it; nothing here is a placeholder. */
 
@@ -322,7 +322,7 @@ async function viewHomepage() {
         <div class="rows">${o.recent.map((r) => `
           <div class="rowitem" data-id="${esc(r.id)}">
             <div class="sq" style="background:var(--surface-3);color:var(--ink-2)">${esc(initials(r.name))}</div>
-            <div class="nm">${esc(r.name)}${r.real ? ' <span class="real">DODO</span>' : ''}
+            <div class="nm">${esc(r.name)}${r.real ? ' <span class="real">ACME</span>' : ''}
               <span>${esc(title(r.category))} &middot; ${esc(r.status)}</span></div>
             <span class="chip c-${r.tone}">${esc(r.band)}</span>
             <span class="when">${esc(r.when)}</span>
@@ -342,7 +342,7 @@ function dirTable(d, compact) {
       <th class="num">Memory score</th><th class="num">Monthly volume</th>
       ${compact ? '' : '<th>Last evaluated</th>'}</tr></thead>
     <tbody>${d.rows.map((r) => `<tr class="click" data-id="${esc(r.id)}">
-      <td><b>${esc(r.name)}</b>${r.real ? ' <span class="real">DODO</span>' : ''}
+      <td><b>${esc(r.name)}</b>${r.real ? ' <span class="real">ACME</span>' : ''}
         <div class="tiny muted mono">${esc(r.domain)} &middot; ${esc(r.country)}</div></td>
       <td class="tiny">${esc(title(r.category))}</td>
       <td><span class="chip c-${r.tone}">${esc(r.band)}</span></td>
@@ -460,7 +460,7 @@ async function viewPortfolio() {
     + `<div class="kpis">
       ${kpi('Active merchants', p.approved.toLocaleString(),
         `${p.total_applications.toLocaleString()} applications, ${pct(p.approval_rate, 0)} approved`)}
-      ${kpi('Annualised volume', usd(p.annual_volume), 'processed under Dodo MIDs')}
+      ${kpi('Annualised volume', usd(p.annual_volume), 'processed under Acme MIDs')}
       ${kpi('Portfolio VAMP ratio', pct(v.ratio, 3),
         `${v.headroom_pct}% headroom to the ${pct(v.above_standard, 2)} acquirer line`,
         vampClass,
@@ -558,7 +558,7 @@ async function viewCases() {
         Click any row to open the case brief.</p>
       <p class="tiny muted" style="margin:6px 0 0">Not shown: ${(state.portfolio.approved || 0).toLocaleString()}
         merchants the system correctly left alone — including
-        <strong>${(state.portfolio.real_customers || 0)} named Dodo customers</strong>
+        <strong>${(state.portfolio.real_customers || 0)} named Acme merchants</strong>
         (Mole, Vibe3D, Draftly, Scira AI and others), all clean, none flagged.</p></div>`;
 }
 
@@ -697,10 +697,10 @@ async function viewBrief(id) {
 
   const decidable = m.status === 'pending';
 
-  return head(esc(m.name) + (m.real ? ' <span class="real">Dodo customer</span>' : ''),
+  return head(esc(m.name) + (m.real ? ' <span class="real">Acme merchant</span>' : ''),
     `${esc(m.domain)} &middot; ${esc(m.country)} &middot; applied ${esc(m.applied_at)} &middot;
      <span class="chip ${tierChip}">${esc(b.policy.tier)}</span>` +
-     (m.real ? ' <span class="tiny muted">&mdash; real Dodo customer; product description from their case study, operating figures illustrative</span>' : ''),
+     (m.real ? ' <span class="tiny muted">&mdash; named Acme merchant; product description from their case study, operating figures illustrative</span>' : ''),
     `<button class="btn ghost small" id="back">&larr; Back to queue</button>`)
   + `<div class="brief"><div>
       <div class="card"><h3>Evidence<span class="hint">findings first, recommendation last</span></h3>
@@ -971,11 +971,11 @@ function viewAssessForm() {
   const draft = state.assessDraft;
   const selectedCountry = (draft && draft.country) || '';
   const seg = `<div class="seg" role="tablist" aria-label="How to load merchant data">
-      <button type="button" data-assess-mode="import" class="${mode === 'import' ? 'on' : ''}">Import from Dodo</button>
+      <button type="button" data-assess-mode="import" class="${mode === 'import' ? 'on' : ''}">Import from Acme</button>
       <button type="button" data-assess-mode="manual" class="${mode === 'manual' ? 'on' : ''}">Fill manually</button>
     </div>
     <p class="tiny muted" style="margin:-8px 0 16px">When a merchant signs up, adds a product, and starts KYC, that packet lands here.
-      Import it so you are not retyping what they already submitted. Manual fill is for cases that are not in Dodo yet.</p>`;
+      Import it so you are not retyping what they already submitted. Manual fill is for cases that are not in Acme yet.</p>`;
 
   if (mode === 'import') {
     const rows = state.applications || [];
@@ -992,23 +992,23 @@ function viewAssessForm() {
         </div>`).join('')}</div>`
       : '<p class="empty">No inbound packets in this demo inbox.</p>';
     return head('Assess a merchant',
-      'Pull the merchant’s Dodo packet, review it, then run the same engine.')
-      + `<div class="card assess-card"><h3>Inbound from Dodo<span class="hint">signup + product + KYC</span></h3>
+      'Pull the merchant’s Acme packet, review it, then run the same engine.')
+      + `<div class="card assess-card"><h3>Inbound from Acme<span class="hint">signup + product + KYC</span></h3>
         ${seg}${inbox}
-        <p class="tiny muted">Demo inbox stands in for the live webhook. In production this is the same JSON the merchant already posted to Dodo.</p>
+        <p class="tiny muted">Demo inbox stands in for the live webhook. In production this is the same JSON the merchant already posted to Acme.</p>
       </div>`;
   }
 
   const banner = draft && draft.application_id ? `<div class="import-banner">
-      <div><strong>Imported from Dodo</strong>
-        <div class="tiny muted">${esc((draft._meta && draft._meta.source) || 'dodo.signup')}
+      <div><strong>Imported from Acme</strong>
+        <div class="tiny muted">${esc((draft._meta && draft._meta.source) || 'acme.signup')}
           · ${esc(APP_STAGE[(draft._meta && draft._meta.stage)] || '')}
           · ${esc((draft._meta && draft._meta.note) || 'Merchant-submitted packet — edit before you run if something looks off.')}</div></div>
       <button type="button" class="btn ghost small" data-assess-mode="import">Inbox</button>
     </div>` : '';
 
   return head('Assess a merchant',
-    'Same packet Dodo collects at signup and Add product. Policy first, then web, graph, and memory. The system recommends; you decide.')
+    'Same packet Acme collects at signup and Add product. Policy first, then web, graph, and memory. The system recommends; you decide.')
   + `<div class="card assess-card">
       ${seg}${banner}
       <h3>Signup</h3>
@@ -1075,7 +1075,7 @@ function viewAssessResult(b) {
   const decided = (m.status && m.status !== 'pending') || !!confirm;
   const toneChip = { ok: 'ok', warn: 'warn', high: 'high', bad: 'bad' }[b.risk_band_tone] || 'mute';
 
-  return head(esc(m.name) + (m.real ? ' <span class="real">Dodo customer</span>' : ''),
+  return head(esc(m.name) + (m.real ? ' <span class="real">Acme merchant</span>' : ''),
     `${esc(m.domain)} · ${esc(m.country)} · ${esc(title(m.category_claimed))}`
     + (b.created ? ' · <span class="chip c-mute">new application</span>' : '')
     + ` · <span class="chip c-mute">${esc(m.status)}</span>`,

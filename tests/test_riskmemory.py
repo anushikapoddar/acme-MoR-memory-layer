@@ -58,7 +58,7 @@ class TestCorpus(unittest.TestCase):
 
 
 class TestRealCustomers(unittest.TestCase):
-    """Real, publicly-named Dodo customers must never sit next to an adverse finding."""
+    """Real, publicly-named Acme merchants must never sit next to an adverse finding."""
 
     def real(self):
         return [m for m in APP.merchants if m.real]
@@ -115,7 +115,7 @@ class TestRealCustomers(unittest.TestCase):
 class TestEvidenceQuality(unittest.TestCase):
     """Guards against prose similarity being mistaken for evidence.
 
-    Both of these started as real false positives against named Dodo
+    Both of these started as real false positives against named Acme
     customers: a memory about refund rates fired on any pitch containing
     "subscription" and "free trial", and a precedent search returned
     neighbours matching only on corpus-wide boilerplate.
@@ -148,7 +148,7 @@ class TestEvidenceQuality(unittest.TestCase):
 
 
 class TestPlatformData(unittest.TestCase):
-    def test_dodo_brand_palette_present(self):
+    def test_acme_brand_palette_present(self):
         for key in ("lime", "forest", "blue", "ink"):
             self.assertRegex(config.BRAND[key], r"^#[0-9A-F]{6}$")
 
@@ -217,7 +217,7 @@ class TestDashboard(unittest.TestCase):
 
     def test_brand_assets_present(self):
         assets = Path(__file__).parent.parent / "web" / "assets"
-        self.assertTrue((assets / "dodo-mark.webp").is_file())
+        self.assertTrue((assets / "acme-mark.svg").is_file())
 
 
 class TestGraph(unittest.TestCase):
@@ -760,7 +760,7 @@ class TestAssessDifferentiation(unittest.TestCase):
 
 
 class TestInboundApplications(unittest.TestCase):
-    """Merchant-submitted Dodo packets can be imported instead of retyped."""
+    """Merchant-submitted Acme packets can be imported instead of retyped."""
 
     def test_inbox_lists_seeded_packets(self):
         from riskmemory.applications import list_applications

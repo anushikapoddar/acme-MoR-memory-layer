@@ -168,7 +168,7 @@ def detect_failing(m: Merchant, graph: ContextGraph,
             out.append(Signal(
                 id="prepaid_exposure", posture="failing", category="insolvency",
                 title=f"${m.prepaid_balance:,.0f} of prepaid service outstanding",
-                detail=("Not fraud. If this merchant fails, Dodo inherits the refunds "
+                detail=("Not fraud. If this merchant fails, Acme inherits the refunds "
                         f"on {months:.1f} months of service already paid for."),
                 lr=round(min(1.6 + months * 0.16, 6.5), 2),
                 evidence=[f"prepaid balance ${m.prepaid_balance:,.0f}",
@@ -399,7 +399,7 @@ def _named_markets(blob: str) -> list[str]:
 
 
 def detect_onboarding(m: Merchant) -> list[Signal]:
-    """Signals from Dodo's real signup + add-product packet.
+    """Signals from Acme's real signup + add-product packet.
 
     Only fires when the merchant carries a signup_category — that is the
     public form packet, not the synthetic corpus's internal taxonomy.
@@ -413,7 +413,7 @@ def detect_onboarding(m: Merchant) -> list[Signal]:
         out.append(Signal(
             id=f"policy:{mapped}", posture="deceiving", category=mapped,
             title="Signup category is on the Merchant Acceptance prohibited list",
-            detail=("Dodo's own form already labels this unsupported: physical goods, "
+            detail=("Acme's own form already labels this unsupported: physical goods, "
                     "manual services, gaming, marketplaces, and financial products "
                     "cannot be onboarded. The engine does not soften that into a maybe."),
             lr=28.0,

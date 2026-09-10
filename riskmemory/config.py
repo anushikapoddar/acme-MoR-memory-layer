@@ -92,7 +92,7 @@ PRECEDENT_SMOOTHING = 4.0
 #: between 0.09 and 0.18. See App._precedent.
 PRECEDENT_MIN_SIMILARITY = 0.20
 
-# -- Dodo merchant acceptance policy taxonomy ------------------------------
+# -- Acme MoR merchant acceptance policy taxonomy ------------------------------
 POLICY_ACCEPTED = {"saas", "digital_goods", "templates_plugins_apps", "ai_product"}
 POLICY_RESTRICTED = {
     "ai_content_generation", "marketing_outreach", "resume_hiring_exam",
@@ -110,7 +110,7 @@ POLICY_PROHIBITED = {
     "religious_guidance", "donations_no_deliverable", "marketplace_resale",
 }
 
-#: Signup dropdown on app.dodopayments.com — coarser than the policy taxonomy.
+#: Signup dropdown on app.acmemor.com — coarser than the policy taxonomy.
 #: Maps to (tier, internal category). Prohibited here is a hard do-not-onboard.
 SIGNUP_CATEGORY = {
     "saas_ai_digital": ("accepted", "saas"),
@@ -123,7 +123,7 @@ SIGNUP_CATEGORY = {
     "others": ("restricted", "productized_services"),
 }
 
-#: Add-product tax category on the Dodo catalogue form.
+#: Add-product tax category on the Acme catalogue form.
 TAX_CATEGORY = {
     "digital_products": "digital_goods",
     "saas": "saas",
@@ -132,7 +132,7 @@ TAX_CATEGORY = {
 }
 
 #: ISO-2 of countries eligible to onboard (ID-issuing country), from
-#: docs.dodopayments.com/miscellaneous/accepted-countries-and-territories
+#: docs.acmemor.com/miscellaneous/accepted-countries-and-territories
 #: as of 1 Sep 2026. Anything else is a geo block.
 ACCEPTED_COUNTRY_ISO = frozenset("""
 AL AD AI AG AR AM AW AU AT AZ BS BH BB BE BZ BJ BM BT BO BA BW BR VG BN BG BF
@@ -220,14 +220,14 @@ def local_night_label(iso: str) -> str:
     tz, abbr, start, end = local_night_window(iso)
     return f"{start:02d}:00–{end:02d}:00 {abbr} ({tz})"
 
-# -- Dodo Payments platform facts (dodopayments.com, 20 Aug 2026) ----------
-PLATFORM_NAME = "Dodo Payments"
-PLATFORM_TAGLINE = "Billing and payments for AI-first companies"
+# -- Acme MoR platform facts (acmemor.com, 20 Aug 2026) ----------
+PLATFORM_NAME = "Acme MoR"
+PLATFORM_TAGLINE = "Merchant of record for digital products"
 COUNTRIES_SUPPORTED = 220
 BUILDERS_ON_PLATFORM = 50_000
 BUSINESSES_ON_PLATFORM = 25_000
 
-#: The product surface Dodo actually sells. Merchants use these, so risk
+#: The product surface Acme actually sells. Merchants use these, so risk
 #: signals differ by product: usage-based billing produces different dispute
 #: patterns from a one-time licence.
 PLATFORM_FEATURES = [
@@ -239,7 +239,7 @@ PLATFORM_FEATURES = [
     "Digital Product Delivery", "License Keys",
 ]
 
-#: Dodo's own brand palette, from dodopayments.com/brand. The UI reads these
+#: Acme's own brand palette, from acmemor.com/brand. The UI reads these
 #: so the console and the marketing site cannot drift apart.
 BRAND = {
     "lime":   "#C6FE1E",   # signature

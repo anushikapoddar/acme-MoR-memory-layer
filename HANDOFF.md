@@ -9,11 +9,11 @@ Anushika Poddar · 20 August 2026
 
 ## 1. What this is
 
-Dodo is the merchant of record. Every merchant it admits borrows Dodo's licences
-and Dodo's liability, and merchants transact under shared Dodo merchant
+Acme is the merchant of record. Every merchant it admits borrows Acme's licences
+and Acme's liability, and merchants transact under shared Acme merchant
 identifiers — so one bad actor's dispute ratio pollutes a pool every honest
 merchant depends on. **The cost of a bad merchant is not bounded by their volume.
-It is bounded by Dodo's standing with its acquirers.**
+It is bounded by Acme's standing with its acquirers.**
 
 Today those decisions are made from isolated, point-in-time evidence, using human
 judgement that does not persist, against outcomes that arrive months later and are
@@ -44,7 +44,7 @@ seconds with no environment to debug.
 
 ```
 riskmemory/
-  config.py      assumed constants, Dodo brand palette, platform features
+  config.py      assumed constants, Acme brand palette, platform features
   corpus.py      deterministic synthetic population (seed 20260820) + real customers
   graph.py       context graph, entity resolution, corroborating-path search
   retrieval.py   hand-rolled TF-IDF + cosine + 4-rule stemmer, no numpy
@@ -73,7 +73,7 @@ of these four to go uncovered entirely.
 |---|---|---|
 | **Deceiving us** | lying at intake | undisclosed illegality, a re-entry under a new legal entity |
 | **Drifting from us** | changing after approval | a B2B tool that quietly adds a prohibited tier |
-| **Failing** | going under, honestly | selling annual plans while volume declines; Dodo holds the refunds |
+| **Failing** | going under, honestly | selling annual plans while volume declines; Acme holds the refunds |
 | **Being attacked** | the victim | payout redirection, card testing, account takeover |
 
 **Failing** and **being attacked** are invisible to any fraud-detection framing —
@@ -123,7 +123,7 @@ are there. Each has a test.
 not scraped, not downloaded, not sourced from anywhere. The application makes no
 network calls of its own.
 
-**All 17 publicly-named Dodo customers are seeded** — Mole, Vibe3D, Draftly,
+**All 17 publicly-named Acme merchants are seeded** — Mole, Vibe3D, Draftly,
 ReplyDaddy, CatDoes, Indilingo, Scira AI, PeerPush, IndieKit, Betide Studio,
 Healthify, Parakeet AI, MATIKS, GPAI, Cardboard, SurgeGrowth, Vaya — as a clean
 control population against ~4,000 invented merchants. Their product descriptions
@@ -196,7 +196,7 @@ path.
 1. **Wire in the Claude API layer** — server-side key, grounded composition over
    retrieved context only, graceful fallback. Designed, not built.
 2. **Real data.** Everything here is synthetic. The first honest test is whether
-   the four postures survive contact with Dodo's actual decline reasons.
+   the four postures survive contact with Acme's actual decline reasons.
 3. **Calibration.** The likelihood ratios are hand-set. With real outcomes they
    should be fitted, and the replay gate becomes the mechanism for doing it
    safely.

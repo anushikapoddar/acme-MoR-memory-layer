@@ -77,8 +77,8 @@ class Merchant:
     truth_note: str = ""
 
     scenario: Optional[str] = None   # marks the hand-authored narrative cases
-    #: True for merchants that are real, publicly-named Dodo customers. Their
-    #: product descriptions are factual (from Dodo's own case studies); volumes
+    #: True for merchants that are real, publicly-named Acme merchants. Their
+    #: product descriptions are factual (from Acme's own case studies); volumes
     #: and dispute figures are illustrative. See REAL_CUSTOMERS and the guard in
     #: build() -- a real merchant may never carry an adverse finding.
     real: bool = False
@@ -86,11 +86,11 @@ class Merchant:
     #: authored ``truth_bad`` so seed declines do not rewrite the prior.
     learned_bad: bool = False
 
-    # Dodo signup / add-product packet (optional on the synthetic corpus)
+    # Acme signup / add-product packet (optional on the synthetic corpus)
     website: Optional[str] = None
     entity_type: Optional[str] = None          # individual | registered
     referral: Optional[str] = None
-    signup_category: Optional[str] = None      # dropdown on app.dodopayments.com
+    signup_category: Optional[str] = None      # dropdown on app.acmemor.com
     tax_category: Optional[str] = None         # Add product tax category
     pricing_type: Optional[str] = None         # one_time | subscription | usage
     price_usd: float = 0.0
@@ -173,7 +173,7 @@ _X = ["remote", "solo", "async", "small", "bootstrapped", "technical", "distribu
       "early-stage", "indie", "lean"]
 
 
-#: Publicly named on dodopayments.com/case-studies. Product descriptions are
+#: Publicly named on acmemor.com/case-studies. Product descriptions are
 #: taken from those case studies; operating figures are illustrative.
 REAL_CUSTOMERS = [
     # (name, domain, country, founder, category, pitch, offering, monthly, txns, refund)
@@ -242,7 +242,7 @@ REAL_CUSTOMERS = [
      "sold as a monthly subscription.",
      "growth tooling subscription", 8_900, 290, 0.019),
     ("Vaya", "vaya.app", "IN", "Vaya Team", "ai_product",
-     "A consumer mobile app sold by subscription through the Dodo checkout.",
+     "A consumer mobile app sold by subscription through the Acme checkout.",
      "consumer app subscription", 10_200, 1_120, 0.015),
 ]
 
@@ -250,7 +250,7 @@ REAL_CUSTOMER_NAMES = frozenset(n for n, *_ in REAL_CUSTOMERS)
 
 
 def _real_customers() -> list[Merchant]:
-    """Real, publicly-named Dodo customers -- seeded as what they are.
+    """Real, publicly-named Acme merchants -- seeded as what they are.
 
     All ten are healthy approved merchants with low dispute ratios. None
     carries an adverse finding, and ``build()`` asserts that none ever will:

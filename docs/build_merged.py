@@ -71,7 +71,7 @@ panels = [
 
 TOKENS = '''
 :root{
-  /* Dodo Payments brand — dodopayments.com/brand + live computed styles */
+  /* Acme MoR brand — acmemor.com/brand + live computed styles */
   --brand-lime:#C6FE1E; --brand-forest:#004F32; --brand-green:#00D87D;
   --brand-blue:#1264FF; --brand-pink:#EE46BC; --brand-purple:#7A5AF8;
   --brand-yellow:#FFD84B; --brand-orange:#FF8B37; --brand-red:#E83439;
@@ -176,7 +176,7 @@ doc = f'''<title>Merchant Risk Memory</title>
     <div class="idbar">
       <span class="mark"></span>
       <span class="nm">Merchant Risk Memory</span>
-      <span class="sub">Dodo Payments</span>
+      <span class="sub">Acme MoR</span>
       <span class="date">20 Aug 2026 &middot; Anushika</span>
     </div>
     <nav class="tabs" role="tablist" aria-label="Sections">

@@ -225,7 +225,7 @@ class MemoryStore:
         self.records[m.id] = m
         # The index holds the *trigger*, not the prose. A distilled pattern is
         # written to be read by a human ("...have repeatedly ended in rights
-        # claims against Dodo"), which makes a poor retrieval key against a
+        # claims against Acme"), which makes a poor retrieval key against a
         # two-line merchant pitch. Separating the two keeps both jobs honest.
         self.index.add(m.id, m.trigger or m.text)
 

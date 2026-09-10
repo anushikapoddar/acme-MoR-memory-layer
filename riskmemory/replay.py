@@ -91,7 +91,7 @@ def distil(incident: Merchant, store: MemoryStore) -> Memory:
         "undisclosed_illegality":
             ("Catalogue-scale ebook and content library offerings that cannot produce "
              "per-title rights or licensing documentation have repeatedly ended in "
-             "rights claims against Dodo. Treat unlimited titles, library and archive "
+             "rights claims against Acme. Treat unlimited titles, library and archive "
              "claims as requiring licences on file before approval."),
         "recidivist_ring":
             ("Applicants sharing a payout holder name, a beneficial owner or a verbatim "
@@ -111,7 +111,7 @@ def distil(incident: Merchant, store: MemoryStore) -> Memory:
              "through the account."),
         "insolvency":
             ("Merchants selling annual plans while volume declines across consecutive "
-             "quarters leave Dodo holding the refunds on prepaid service."),
+             "quarters leave Acme holding the refunds on prepaid service."),
         "account_takeover":
             ("Payout bank details changed within days of an anomalous login pattern "
              "indicate a compromised merchant account rather than a dishonest merchant."),

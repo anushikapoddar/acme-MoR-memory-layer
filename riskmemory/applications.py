@@ -1,4 +1,4 @@
-"""Inbound merchant packets — what Dodo already collected at signup.
+"""Inbound merchant packets — what Acme already collected at signup.
 
 In production this is the payload from signup + add-product + KYC, delivered
 by webhook or the merchant API. Here it is a seeded inbox so an analyst can
@@ -8,11 +8,11 @@ from __future__ import annotations
 
 from . import config
 
-# Shape matches the public Dodo forms. `name` is business name.
+# Shape matches the public Acme forms. `name` is business name.
 INBOUND = [
     {
         "id": "app_lumen",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "product_form_pending",
         "kyc": "not_started",
         "note": "Linked to a terminated merchant on the graph",
@@ -34,7 +34,7 @@ INBOUND = [
     },
     {
         "id": "app_kindle",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "product_form_pending",
         "kyc": "not_started",
         "note": "Catalogue / rights case",
@@ -56,7 +56,7 @@ INBOUND = [
     },
     {
         "id": "app_thistle",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "kyc_pending",
         "kyc": "pending",
         "note": "Clean CI analytics applicant",
@@ -78,7 +78,7 @@ INBOUND = [
     },
     {
         "id": "app_nightwell",
-        "source": "dodo.live",
+        "source": "acme.live",
         "stage": "on_platform",
         "kyc": "approved",
         "note": "Edtech on the book — night-heavy volume",
@@ -100,7 +100,7 @@ INBOUND = [
     },
     {
         "id": "app_services",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "disclaimer",
         "kyc": "not_started",
         "note": "Self-selected Services — policy block",
@@ -122,7 +122,7 @@ INBOUND = [
     },
     {
         "id": "app_gaming",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "disclaimer",
         "kyc": "not_started",
         "note": "Gaming category — policy block",
@@ -144,7 +144,7 @@ INBOUND = [
     },
     {
         "id": "app_geo",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "signup",
         "kyc": "not_started",
         "note": "Country not on the accepted list",
@@ -166,7 +166,7 @@ INBOUND = [
     },
     {
         "id": "app_mismatch",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "product_form_pending",
         "kyc": "not_started",
         "note": "Ticked SaaS; copy is consulting",
@@ -188,7 +188,7 @@ INBOUND = [
     },
     {
         "id": "app_audience",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "product_form_pending",
         "kyc": "not_started",
         "note": "IN entity; live US-night classes — hours pattern at signup",
@@ -210,7 +210,7 @@ INBOUND = [
     },
     {
         "id": "app_lowvalue",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "product_form_pending",
         "kyc": "not_started",
         "note": "Sub-$5 file drop on an accepted category",
@@ -232,7 +232,7 @@ INBOUND = [
     },
     {
         "id": "app_solo_uni",
-        "source": "dodo.signup",
+        "source": "acme.signup",
         "stage": "kyc_pending",
         "kyc": "pending",
         "note": "Person KYC, university partnership in the pitch",

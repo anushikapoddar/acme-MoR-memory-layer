@@ -301,7 +301,7 @@ class App:
 
     @staticmethod
     def _merge_application(payload: dict) -> dict:
-        """Fill blanks from a Dodo signup packet so the analyst does not retype.
+        """Fill blanks from a Acme signup packet so the analyst does not retype.
 
         Form fields win when they are non-empty. ``application_id`` alone is
         enough to assess a seeded inbound packet.

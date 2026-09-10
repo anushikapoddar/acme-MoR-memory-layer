@@ -1,7 +1,7 @@
 <title>Merchant Risk Console</title>
 <style>
 :root{
-  /* Palette derived from dodopayments.com/brand + computed styles on the live site.
+  /* Palette derived from acmemor.com/brand + computed styles on the live site.
      Signature lime #C6FE1E and forest #004F32 are theirs; text #00160D is their
      actual body colour -- a green-black, not a grey. */
   --brand-lime:#C6FE1E; --brand-forest:#004F32; --brand-green:#00D87D;
@@ -257,14 +257,14 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
 <div class="wrap">
 
 <header class="mast">
-  <div class="eyebrow">Dodo Payments &middot; Console design &middot; v4 &mdash; as built</div>
+  <div class="eyebrow">Acme MoR &middot; Console design &middot; v4 &mdash; as built</div>
   <h1>Merchant Risk Console</h1>
   <p class="dek">The console is running. This is what shipped, and &mdash; more usefully &mdash; the four places where the design we wanted and the data we actually have disagreed, and what we did about it. Every number on every screen is computed by the engine. Nothing here is a placeholder.</p>
 </header>
 
 <section>
   <h2><span class="sn">1</span>The shell</h2>
-  <p>A fixed left sidebar with eight destinations, a global search, and a status card that reports what the memory layer currently believes. The palette is Dodo&rsquo;s own: lime <code>#C6FE1E</code> on the active item and the primary action, forest-green-black <code>#00160D</code> for text.</p>
+  <p>A fixed left sidebar with eight destinations, a global search, and a status card that reports what the memory layer currently believes. The palette is Acme&rsquo;s own: lime <code>#C6FE1E</code> on the active item and the primary action, forest-green-black <code>#00160D</code> for text.</p>
   <p>Two things are deliberately <strong>absent</strong>. The <span class="gone">always-on summary bar</span> from v3 is gone &mdash; once an Overview screen existed, a strip repeating the same five numbers on every tab was duplication, and it made Chat and History harder to read for no gain. And there are no <span class="gone">Reports</span>, <span class="gone">Integrations</span> or <span class="gone">Settings</span> tabs: we had nothing real to put behind them, and an empty destination is worse than a missing one.</p>
   <div class="tbl">
     <table>
@@ -290,7 +290,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
       <div class="bar"><i></i><i></i><i></i> &nbsp;Merchant Risk Console</div>
       <div class="body m-app">
         <div class="side-m">
-          <div class="brandrow"><s></s><b>Dodo</b></div>
+          <div class="brandrow"><s></s><b>Acme MoR</b></div>
           <a class="on"><s></s>Overview</a>
           <a><s></s>Merchants</a>
           <a><s></s>Evaluations<i>11</i></a>
@@ -359,7 +359,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
         <tr><td class="k">Memory accuracy 94.6%</td><td>Memory confidence 90.6%</td><td>There is no accuracy metric. Mean confidence across the records currently in force is a real quantity the store can report.</td></tr>
         <tr><td class="k">&uarr;12% vs last month</td><td>Deltas computed from decision dates</td><td>Two of the four stats have no prior period to compare against. They carry a note instead of an invented arrow &mdash; which is why one reads &minus;8%, not a flattering &uarr;.</td></tr>
         <tr><td class="k">Memory score /100 per merchant</td><td>100 &minus; P(bad), labelled as such</td><td>A bare score invites the reader to think it means something independent. It is one number in two dresses, and the column says so.</td></tr>
-        <tr><td class="k">Retail, F&amp;B, Electronics, Apparel</td><td>Dodo&rsquo;s policy categories</td><td>SaaS, AI product, digital goods, templates &amp; plugins, ebooks. Generic retail verticals describe a business Dodo is not in.</td></tr>
+        <tr><td class="k">Retail, F&amp;B, Electronics, Apparel</td><td>Acme&rsquo;s policy categories</td><td>SaaS, AI product, digital goods, templates &amp; plugins, ebooks. Generic retail verticals describe a business Acme is not in.</td></tr>
       </tbody>
     </table>
   </div>
@@ -377,7 +377,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
 
 <section>
   <h2><span class="sn">5</span>Two bugs the build surfaced</h2>
-  <p>Seeding the corpus with Dodo&rsquo;s real, publicly-named customers is a test as much as a feature: a clean population that the engine must clear. It did not, twice &mdash; and both failures were the same mistake wearing different clothes. <strong>Prose similarity being mistaken for evidence.</strong></p>
+  <p>Seeding the corpus with Acme&rsquo;s real, publicly-named customers is a test as much as a feature: a clean population that the engine must clear. It did not, twice &mdash; and both failures were the same mistake wearing different clothes. <strong>Prose similarity being mistaken for evidence.</strong></p>
   <div class="tbl">
     <table>
       <thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead>
@@ -391,8 +391,8 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
 </section>
 
 <section>
-  <h2><span class="sn">6</span>Real Dodo merchants in the corpus</h2>
-  <p>All <strong>17</strong> publicly-named Dodo customers are seeded: Mole, Vibe3D, Draftly, ReplyDaddy, CatDoes, Indilingo, Scira&nbsp;AI, PeerPush, IndieKit, Betide&nbsp;Studio, Healthify, Parakeet&nbsp;AI, MATIKS, GPAI, Cardboard, SurgeGrowth and Vaya. They give the demo a control population with real product descriptions and plausible operating shapes, against ~4,000 invented merchants.</p>
+  <h2><span class="sn">6</span>Named Acme merchants in the corpus</h2>
+  <p>All <strong>17</strong> publicly-named Acme merchants are seeded: Mole, Vibe3D, Draftly, ReplyDaddy, CatDoes, Indilingo, Scira&nbsp;AI, PeerPush, IndieKit, Betide&nbsp;Studio, Healthify, Parakeet&nbsp;AI, MATIKS, GPAI, Cardboard, SurgeGrowth and Vaya. They give the demo a control population with real product descriptions and plausible operating shapes, against ~4,000 invented merchants.</p>
   <div class="callout warn">
     <span class="tag">Hard rule, enforced in code</span>
     <p><strong>A real merchant never appears next to an adverse finding.</strong> Not flagged, not declined, not in a fraud ring, not graph-linked to a terminated merchant, never carrying a &ldquo;went bad&rdquo; label, never cited as adverse precedent.</p>
@@ -422,7 +422,7 @@ footer{border-top:1px solid var(--rule);margin-top:44px;padding-top:16px;font-si
 </section>
 
 <footer>
-  Anushika &middot; Dodo Payments &middot; 20 August 2026 &middot; v4, as built.
+  Anushika &middot; Acme MoR &middot; 20 August 2026 &middot; v4, as built.
   Synthetic corpus generated locally from seed 20260820; the application makes no network calls of its own.
 </footer>
 
