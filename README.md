@@ -88,7 +88,12 @@ The next step is integrating with Acme's actual system.
    forward, will be integrated. After we connect to the actual system, the
    memory layer will update itself from those calls.
 
-## Run it
+## Try it
+
+**Live demo:** <https://riskmemory.anushika.space>
+
+(Same stall as `https://acme-mor-memory-layer.onrender.com`. The first visit after
+a quiet stretch can take about a minute — the free host wakes the app up.)
 
 On your own machine:
 
@@ -96,22 +101,10 @@ On your own machine:
 ./run.sh
 ```
 
-That opens <http://127.0.0.1:8765> **on this computer only**. It will not load
-from GitHub, or for anyone else — `127.0.0.1` is localhost.
+That opens <http://127.0.0.1:8765> **on this computer only**.
 
 **No extra installs.** Python 3.11+ standard library only. No pip, no npm, no
 build step.
-
-### Public demo
-
-This is a live Python app, so it cannot run on GitHub Pages. Host it on a
-free [Render](https://render.com) web service (custom domains work on the
-free plan), then put that URL here.
-
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/anushikapoddar/acme-MoR-memory-layer)
-
-After it is live: Render → your service → **Custom Domains** → add your
-domain, then create a CNAME to the `onrender.com` hostname Render shows you.
 
 ```bash
 python3 -m unittest discover -s tests -q     # 82 tests
