@@ -39,8 +39,8 @@ WARMING_HTML = b"""<!doctype html>
     font-family:Inter,system-ui,sans-serif}
   body{display:grid;place-items:center}
   .box{max-width:28rem;padding:2rem;text-align:center}
-  .mark{width:40px;height:40px;border-radius:50%;background:#C6FE1E;
-    color:#00160D;display:grid;place-items:center;font-weight:800;margin:0 auto 1rem}
+  .mark{width:40px;height:40px;border-radius:50%;background:#1A4A38;
+    color:#F4F1E6;display:grid;place-items:center;font-weight:800;margin:0 auto 1rem}
   h1{font-size:1.25rem;margin:0 0 .5rem}
   p{color:#8B938E;line-height:1.5}
 </style>

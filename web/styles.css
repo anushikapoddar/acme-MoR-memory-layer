@@ -50,24 +50,24 @@ a{color:var(--accent);text-decoration:none}
 .nav a svg{width:19px;height:19px;flex:none;stroke:currentColor;fill:none;
   stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
 .nav a:hover{background:var(--surface-2);color:var(--ink)}
-.nav a.on{background:var(--lime);color:#00160D;font-weight:600}
-.nav a.on svg{opacity:1;stroke:#00160D}
+.nav a.on{background:#1A4A38;color:#F4F1E6;font-weight:600}
+.nav a.on svg{opacity:1;stroke:#F4F1E6}
 .nav a .count{margin-left:auto;font-family:var(--mono);font-size:10.5px;
   background:var(--surface-3);color:var(--muted);border-radius:9px;padding:1px 7px}
-.nav a.on .count{background:#00160D;color:var(--lime)}
+.nav a.on .count{background:rgba(244,241,230,.18);color:#F4F1E6}
 
 .statuscard{margin:12px;padding:16px;border:1px solid var(--rule);border-radius:12px;
   background:var(--surface-2)}
 .statuscard .t{font-size:13px;font-weight:650;margin-bottom:9px}
-.statuscard .live{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ok);
+.statuscard .live{display:flex;align-items:center;gap:7px;font-size:13px;color:#8FB59A;
   font-weight:550;margin-bottom:10px}
-.statuscard .live i{width:8px;height:8px;border-radius:50%;background:var(--brand-green);
+.statuscard .live i{width:8px;height:8px;border-radius:50%;background:#1A4A38;
   display:block;flex:none}
 .statuscard .kv{display:flex;justify-content:space-between;font-size:12.5px;
   color:var(--muted);margin-bottom:9px}
 .statuscard .kv b{color:var(--ink);font-weight:600}
 .statuscard .track{height:6px;background:var(--surface-3);border-radius:4px;overflow:hidden}
-.statuscard .track i{display:block;height:100%;background:var(--brand-green);border-radius:4px}
+.statuscard .track i{display:block;height:100%;background:#1A4A38;border-radius:4px}
 .statuscard button{width:100%;margin-top:12px;background:var(--surface);
   border:1px solid var(--rule-2);border-radius:9px;padding:8px;font-size:13px;
   cursor:pointer;color:var(--ink-2);display:flex;align-items:center;justify-content:center;gap:7px}
@@ -119,6 +119,51 @@ main:has(.page.homepage){padding-bottom:0}
 .page.homepage .legend{gap:6px}
 .page.homepage .rowitem{padding:8px 0}
 .page.homepage td,.page.homepage th{padding:8px 10px}
+
+/* Homepage wash: sage / cream gradient + dark green type. Layout unchanged. */
+.shell:has(.page.homepage){
+  color-scheme:light;
+  background:
+    radial-gradient(90% 70% at 6% 12%, rgba(176,204,158,.58) 0%, transparent 58%),
+    radial-gradient(70% 50% at 94% 6%, rgba(214,214,170,.42) 0%, transparent 50%),
+    radial-gradient(55% 45% at 82% 96%, rgba(186,204,164,.38) 0%, transparent 55%),
+    radial-gradient(42% 32% at 18% 88%, rgba(232,226,186,.4) 0%, transparent 52%),
+    linear-gradient(165deg, #d7e6ce 0%, #e8f0e2 28%, #f4f2e8 62%, #e6eedc 100%)}
+.shell:has(.page.homepage) > div{background:transparent;min-height:100vh}
+.shell:has(.page.homepage) .topbar{
+  background:transparent;border-bottom-color:rgba(26,74,56,.1)}
+.shell:has(.page.homepage) .bell{
+  background:rgba(255,255,255,.62);border-color:rgba(26,74,56,.14)}
+.shell:has(.page.homepage) .bell svg{stroke:#1A4A38}
+.shell:has(.page.homepage) .bell .dot{border-color:rgba(255,255,255,.7)}
+
+.shell:has(.page.homepage) .side{
+  --ink:#12261C; --ink-2:#2C4438; --muted:#5C7468; --faint:#7A9186;
+  --surface:rgba(255,255,255,.55); --surface-2:rgba(255,255,255,.42);
+  --surface-3:rgba(26,74,56,.1);
+  --rule:rgba(26,74,56,.1); --rule-2:rgba(26,74,56,.14);
+  background:rgba(247,249,240,.42);border-right-color:rgba(26,74,56,.1);
+  color:#12261C}
+.shell:has(.page.homepage) .side .logo .wm{color:#12261C}
+.shell:has(.page.homepage) .statuscard .live{color:#1A4A38}
+.shell:has(.page.homepage) .statuscard .live i,
+.shell:has(.page.homepage) .statuscard .track i{background:#1A4A38}
+
+.page.homepage{
+  --ink:#12261C; --ink-2:#2C4438; --muted:#5C7468; --faint:#7A9186;
+  --surface:rgba(255,255,255,.86); --surface-2:rgba(255,255,255,.62);
+  --surface-3:rgba(26,74,56,.08);
+  --rule:rgba(26,74,56,.1); --rule-2:rgba(26,74,56,.14);
+  --shadow:0 1px 2px rgba(18,38,28,.04),0 14px 32px rgba(18,38,28,.08);
+  color:#12261C}
+.page.homepage .pagehead h2{color:#12261C}
+.page.homepage .btn-primary{background:#1A4A38;color:#F4F1E6}
+.page.homepage .btn-primary svg{stroke:#F4F1E6}
+.page.homepage .btn-primary:hover{background:#14392C}
+.page.homepage .ic.lime{background:rgba(26,74,56,.12)}
+.page.homepage .ic.lime svg{stroke:#1A4A38}
+.page.homepage .real{background:#1A4A38;color:#F4F1E6}
+
 .pagehead{display:flex;align-items:flex-start;justify-content:space-between;
   gap:20px;flex-wrap:wrap;margin-bottom:22px}
 .pagehead h2{font-family:var(--display);font-size:28px;font-weight:700;margin:0;

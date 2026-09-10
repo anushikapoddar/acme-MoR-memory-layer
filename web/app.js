@@ -1164,9 +1164,9 @@ const RENDER = {
 async function render() {
   syncTopbar();
   const main = $('#main');
-  main.innerHTML = '<div class="page"><div class="empty"><span class="spinner"></span>Loading…</div></div>';
+  const home = !state.briefId && state.view === 'homepage';
+  main.innerHTML = `<div class="page${home ? ' homepage' : ''}"><div class="empty"><span class="spinner"></span>Loading…</div></div>`;
   try {
-    const home = !state.briefId && state.view === 'homepage';
     main.innerHTML = `<div class="page${home ? ' homepage' : ''}">` + (state.briefId
       ? await viewBrief(state.briefId)
       : await RENDER[state.view]()) + '</div>';
