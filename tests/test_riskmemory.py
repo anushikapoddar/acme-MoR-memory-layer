@@ -810,9 +810,10 @@ class TestInboundApplications(unittest.TestCase):
         out = App().assess({"application_id": "app_solo_uni", "web": False})
         self.assertTrue(any(s["id"] == "entity:solo_institution" for s in out["signals"]))
 
-    def test_stylesheet_is_dark(self):
+    def test_stylesheet_is_light(self):
         css = (Path(__file__).parent.parent / "web" / "styles.css").read_text()
-        self.assertIn("color-scheme:dark", css.replace(" ", ""))
+        self.assertIn("color-scheme:light", css.replace(" ", ""))
+        self.assertNotIn("#C6FE1E", css)
         js = (Path(__file__).parent.parent / "web" / "app.js").read_text()
         self.assertIn("flagEmoji", js)
         self.assertIn("/api/applications", js)

@@ -35,14 +35,14 @@ WARMING_HTML = b"""<!doctype html>
 <meta http-equiv="refresh" content="3">
 <title>Acme MoR \xe2\x80\x94 starting</title>
 <style>
-  html,body{height:100%;margin:0;background:#0B0E0C;color:#F4F6F5;
+  html,body{height:100%;margin:0;background:#e8f0e2;color:#12261C;
     font-family:Inter,system-ui,sans-serif}
   body{display:grid;place-items:center}
   .box{max-width:28rem;padding:2rem;text-align:center}
   .mark{width:40px;height:40px;border-radius:50%;background:#1A4A38;
     color:#F4F1E6;display:grid;place-items:center;font-weight:800;margin:0 auto 1rem}
   h1{font-size:1.25rem;margin:0 0 .5rem}
-  p{color:#8B938E;line-height:1.5}
+  p{color:#5C7468;line-height:1.5}
 </style>
 </head>
 <body>

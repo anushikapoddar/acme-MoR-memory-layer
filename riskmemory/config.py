@@ -239,20 +239,20 @@ PLATFORM_FEATURES = [
     "Digital Product Delivery", "License Keys",
 ]
 
-#: Acme's own brand palette, from acmemor.com/brand. The UI reads these
-#: so the console and the marketing site cannot drift apart.
+#: Acme's own brand palette. The UI reads these so the console
+#: and config cannot drift apart.
 BRAND = {
-    "lime":   "#C6FE1E",   # signature
+    "lime":   "#1A4A38",   # signature dark green
     "forest": "#004F32",   # dark ground
-    "green":  "#00D87D",
+    "green":  "#2F7A52",
     "blue":   "#1264FF",
     "pink":   "#EE46BC",
     "purple": "#7A5AF8",
-    "yellow": "#FFD84B",
+    "yellow": "#C4922A",
     "orange": "#FF8B37",
     "red":    "#E83439",
-    "ink":    "#00160D",   # body text -- a green-black, not a grey
-    "muted":  "#666666",
+    "ink":    "#12261C",   # body text -- a green-black, not a grey
+    "muted":  "#5C7468",
     "rule":   "#E7E7E7",
 }
 
